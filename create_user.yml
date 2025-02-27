@@ -1,0 +1,11 @@
+-
+  name: Create a user aakash in slave machine
+  become: yes
+  hosts: servers
+  tasks:
+    - name: Create user- aakash
+      user:
+        name: aakash
+        create_home: yes
+        groups: root
+        append: yes

@@ -1,0 +1,14 @@
+- 
+  name: Adding multiple users using loop
+  become: yes
+  hosts: servers
+  tasks:
+    - name: Add multiple users using loop
+      user:
+        name: "{{item}}"
+        state: present
+        groups: root
+      loop:
+        - testUser1
+        - testUser2
+        - testUser3 

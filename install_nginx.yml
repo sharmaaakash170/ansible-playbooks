@@ -1,0 +1,16 @@
+-
+  name: This playbook is for installing nginx webserver in my slave machines
+  hosts: servers
+  become: yes
+  tasks:
+    - name: Update cache
+      apt:
+        update_cache: yes
+
+    - name: Install nginx webserver
+      apt:
+        name: nginx
+        state: present
+
+    - name: Running nginx service
+      command: nginx

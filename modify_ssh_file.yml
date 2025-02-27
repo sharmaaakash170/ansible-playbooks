@@ -1,0 +1,18 @@
+- 
+  name: Modify our ssh file of slave
+  become: yes
+  hosts: servers
+  tasks:
+    - name: Modify .ssh file of slave
+      lineinfile:
+        path: /etc/ssh/sshd_config
+        regexp: '^#AllowTcpForwarding'
+        line: '#AllowTcpForwarding yes'
+        backup: yes
+
+    - name: Stop nginx manually
+      command: pkill -f nginx
+      ignore_errors: yes
+
+    - name: Nginx service start manually
+      command: nginx

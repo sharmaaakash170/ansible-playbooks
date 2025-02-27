@@ -1,0 +1,26 @@
+-
+  name: Deploy simpe website
+  hosts: servers
+  become: yes
+  tasks:
+    - name: Install/Check nginx installation
+      apt:
+        name: nginx
+        state: present
+        update_cache: yes
+
+    - name: Stop the running nginx server
+      command: pkill -f nginx
+      ignore_errors: yes
+
+
+    - name: Copy the index.html file to slave servers
+      copy:
+        src: index.html
+        dest: /var/www/html/index.html
+        owner: www-data
+        group: www-data
+        mode: '0644'
+
+    - name: Start nginx service again
+      command: nginx

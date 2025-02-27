@@ -1,0 +1,12 @@
+-
+  name: This file is for creating file in slave machine
+  become: yes
+  hosts: servers
+  tasks:
+    - name: Create my first file using ansible
+      ansible.builtin.file:
+        path: /mnt/playbook.txt
+        state: touch
+        owner: "root"
+        group: "root"
+        mode: "0644"

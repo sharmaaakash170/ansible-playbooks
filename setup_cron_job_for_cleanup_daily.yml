@@ -1,0 +1,20 @@
+-
+  name: Cron job for cleaning logs daily
+  hosts: servers
+  become: yes
+  tasks:
+    - name: Install Cron package
+      apt:
+        name: cron
+        state: present
+      when: ansible_distribution== "Ubuntu"
+
+    - name: Start cron service
+      command: cron
+
+    - name: Cron job for cleaning up logs daily
+      cron:
+        name: "Cron job for cleanup"
+        minute: "0"
+        hour: "0"
+        job: "find /var/log -type f -name '*.log' -mtime +7 -exec rm -rf {} \\;"

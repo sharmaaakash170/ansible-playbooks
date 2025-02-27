@@ -1,0 +1,12 @@
+-
+  name: Modify aakash.txt
+  hosts: servers
+  become: yes
+  tasks:
+    - name: modify aakash.txt
+      lineinfile:
+        path: /mnt/aakash.txt
+        regexp: '^not_updated'
+        line: 'updated_by_aakash'
+        backup: yes
+

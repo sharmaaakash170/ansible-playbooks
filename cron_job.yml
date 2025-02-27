@@ -1,0 +1,10 @@
+- 
+  name: Cron job for creating directory in every minute
+  hosts: servers
+  become: yes
+  tasks:
+    - name: Cron job for creating file
+      cron:
+        name: "Create dir"
+        minute: "*"
+        job: "mkdir -p /mnt/cron$(date +\\%Y\\%m\\%d_\\%H\\%M)"
