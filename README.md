@@ -1,39 +1,17 @@
-Here's a professional and well-structured `README.md` template for your Ansible playbook repository. It includes an introduction, setup instructions, usage, and contribution guidelines.  
-
-Let me know if you want any modifications! 🚀  
-
----
-
-## 🛠️ Ansible Playbook for [Project Name]  
+## 🛠️ Ansible Playbook for Beginner
 
 ![Ansible](https://img.shields.io/badge/Automation-Ansible-blue?style=flat&logo=ansible)  
 ![GitHub](https://img.shields.io/github/license/sharmaaakash170/ansible-playbook?style=flat)  
 ![GitHub last commit](https://img.shields.io/github/last-commit/sharmaaakash170/ansible-playbook?style=flat)  
 
 ### 📌 Overview  
-This repository contains an **Ansible Playbook** designed to automate [describe the purpose of your playbook, e.g., "the deployment of a MySQL database on an Ubuntu server"].  
+This repository contains an **Ansible Playbook** designed to learn Ansible from scratch.
 
 ### 🚀 Features  
 ✅ Automated installation and configuration of [service]  
 ✅ Supports multiple environments (Development, Staging, Production)  
 ✅ Secure and customizable with environment variables  
 ✅ Idempotent and scalable  
-
----
-
-## 📂 Directory Structure  
-
-```
-ansible-playbook/
-│── inventory/         # Inventory files (hosts.yml)
-│── roles/             # Ansible roles
-│   ├── common/        # Common setup (if applicable)
-│   ├── mysql/         # Example: MySQL role
-│── group_vars/        # Environment-specific variables
-│── playbook.yml       # Main playbook file
-│── requirements.yml   # Dependencies (if any)
-│── README.md          # This file
-```
 
 ---
 
@@ -136,4 +114,3 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ---
 
-Let me know if you want to add more details or modify anything! 🚀
