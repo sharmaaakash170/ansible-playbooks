@@ -1,8 +1,6 @@
 ## 🛠️ Ansible Playbook for Beginner
 
 ![Ansible](https://img.shields.io/badge/Automation-Ansible-blue?style=flat&logo=ansible)  
-![GitHub](https://img.shields.io/github/license/sharmaaakash170/ansible-playbook?style=flat)  
-![GitHub last commit](https://img.shields.io/github/last-commit/sharmaaakash170/ansible-playbook?style=flat)  
 
 ### 📌 Overview  
 This repository contains an **Ansible Playbook** designed to learn Ansible from scratch.
